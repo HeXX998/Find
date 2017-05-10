@@ -1,0 +1,28 @@
+<div class="loginColumns animated fadeInDown loginColumns-long">
+  <div class="row">
+    <div class="col-md-7">
+      <h1 class="logo-name">Find</h1>
+    </div>
+
+    <div class="col-md-5">
+      <div class="login-box">
+	<h3>Find账户</h3>
+        <%= form_tag(user_session_path, method: 'post', class: 'm-t') do %>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" name="user[email]" required="">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" name="user[password]" required="">
+            </div>
+            <button type="submit" class="btn btn-primary block full-width m-b">登录</button>
+
+            <p class="text-muted text-center">
+              <small>没有Find账户?</small>
+            </p>
+            <a class="btn btn-sm btn-white btn-block" href="<%= new_user_registration_path %>">注册Find账户</a>
+        <% end %>
+	<p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
+      </div>
+    </div>
+  </div>
+</div>
